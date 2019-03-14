@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>UHI Model Page</title>
+<style type="text/css">
+ body {
+        width: 800px;
+      }
+</style>
+</head>
+<body bgcolor="#ff88ff">
+<center><H1>Realtime and Forecast Maps</H1></center>
+<p>
+<hr>
+<p>
+<H2>Mid-day Temperature Estimations Map</H2><br>
+<i>produced daily</i>
+<p>
+Below is shown estimates of spatial temperature patterns for Manhattan or the 4 northern boroughs of New York for 3 pm today and tomorrow.
+These maps are based on surface characteristics, the average temperature from the weather forecast, and an estimate of spatial temperature variability based on forecast weather conditions.  The temperature patterns are estimated based on a series of walking field campaigns throughout Manhattan along the shadowed sides of streets, between 2-3 pm.  
+<p>
+The maps are updated each morning by 11 am.
+<p>
+<table>
+<tr>
+<td width="50%">
+  <img src="images/manhattanscalemap_today.png"><b><center>Predicted Air Temperatures 3 pm Wed May 20 </center></b>
+  <p>
+</td>
+<td width="50%">
+  <img src="images/4boroughscalemap_today.png"><b><center>Predicted Air Temperatures 3 pm Wed May 20 </center></b>
+  <p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+  <img src="images/manhattanscalemap_tomorrow.png"><b><center>Predicted Air Temperatures 3 pm Thu May 21 </center></b>
+</td>
+<td width="50%">
+  <img src="images/4boroughscalemap_tomorrow.png"><b><center>Predicted Air Temperatures 3 pm Thu May 21 </center></b>
+</td>
+</tr>
+</table><p><p>
+Some explanation will help understand the daily maps above.  The plots below are based on regressions between average measured temperatures at street level and local surface characteristics (elevation, vegetation, building geometry, albedo, local water fraction). Sunny avenues are not modelled due to concerns about instrument shielding. The scale shows the number of standard deviations (SD) from the average, where the SD is calculated from the temperatures measured throughout Manhattan for each day data was collected. Note that yellow represents an average temperature; the red end is warmer and the blue end is cooler.
+<table>
+<tr>
+<td width="33%">
+  <img src="images/staticTmap_streetsHiRes.png">
+<B>Shady Streets Surface Based Model</B> -
+  This shows expected spatial temperature variations on the shady side of the streets, based on regression of surface characteristics.
+</td>
+<td width="34%"> 
+<img src="images/staticTmap_graypts.png">
+<B>Observation Routes Superimposed</B> - the points at which observations are averaged together are shown by gray triangles, surrounded by triangles with colors that match the observations.
+</td>
+<td width="33%">
+  <img src="images/staticTmap_colorpts.png">
+<B>Observations and Predictions</B> -
+  This is the same as the middle map, but with the gray triangles removed.  If the predicted anomalies match the observed anomalies, the colors of the observed triangles will match the background and will not be seen.
+</td>
+</tr>
+</table>
+The comparison above points out several features of the model:
+<ul>
+<li>Elevation and vegetation were seen to be the most important variables that affect local temperature.  The fact that the model matches observations best in Northern Manhattan is likely due to having greater variability of these surface features.</li>
+<li>  Observations were cooler in Central park than predicted by the model.  This is likely because the park paths are lined with trees, while the model uses 100 m square averages that would capture both open and vegetated areas. </li>
+<li> The model and observations do not agree well in the Villages (2nd and 3rd route from the bottom).  This is likely due to poor correlations with building data, for which area fractions would have been thrown off for the wider than average 14th and Houston streets.
+<li>The cool observations at the southern tip of Manhattan is most likely due to sea breeze.
+</ul>
+The maps above show temperature anomalies in units of standard deviations: how much warmer or colder a location is compared to the average in terms of percentiles, not degrees.  In order to get the degrees, you have to know what the spread of the data is around the average.  Clearly the weather will affect this variability: we would expect a completly overcast day to have lower variability from location to location than a sunny day, for example.
+<p>
+The fixed instrumentation experienced 3 months of weather.  Hourly averages at each location filters out noise due to fluctuations from convection.  The standard deviation of these 10 fixed hourly averages reflects the spatial variability seen in the street walks.  These three months of variability can be regressed against weather variables to arrive at a method to predict surface temperature variability from weather forecasts.
+<p>
+<img src="images/NWP_hobospaceTsd.png">
+<p>
+Surface temperature, relative humidity, wind components, cloud cover and temperature lapse rates were regressed against the spatial variability in temperature.  The plot above shows the predicted variability versus the observed variability using this method: the fit is marginal, but there is definite information content.
+<p>
+The plan to forecast temperature anomalies is therefore simple, and proceeds in two steps.
+<ol>
+<li> Predict the surface anomaly pattern based on surface variables (this is the map above).  This pattern remains fixed by the surface.</li>
+<li>Predict the average and the amplitude of the surface anomaly pattern based on weather information.  This just means that the color scale in the maps above will no longer be centered on zero, and the size of each increment will change with the weather.</li>
+</ol>
+<hr>
+<p>
+<H2> Dynamic Temperature Map Forecasts</H2><br>
+<i>Produced Daily</i>
+<p>
+This map combines CCNY's 1 km resolution urban weather research model (uWRF) with the higher resolution surface influenced temperature anomalies of above.  This allows capture of midscale circulations such as seabreeze or the effects of different wind directions interacting with topography. <p>
+<i>Status: under development, possibly available the winter of 2015.</i>
+<hr>
+
+<p>
+<H2>Interpolated MetNet Station Data</H2><br>
+<i>updated hourly</i>
+<p>
+This map shows temperature interpolated between stations in the MetNet system.  Caution should be used when using data interpolation on fields that are known not to be smooth at the resoluton of the original data points: our field campaigns have shown variations at the neighborhood scale.  Also, individual stations could be strongly effected by highly localalized conditions.  Nonetheless such an interpolation can show the overall regional temperature pattern around the city if enough stations are included.
+<p>
+<img src="images/current_Tinterp.png">
+<p>
+<I>Status: awaiting direct feed from MetNet, possibly 2015</I>
+<p>
+<hr>
+
+</body>
+</html>

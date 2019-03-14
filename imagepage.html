@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>Manhattan UHI Images</title>
+<style type="text/css">
+ body {
+        width: 1000px;
+      }
+</style>
+</head>
+<Body bgcolor="#99ff99">
+<H1><center> Manhattan Heat Island Field Campaigns Images</center></H1>
+<hr>
+<h2><center>Walking Campaigns</center></h2>
+<p>
+This images are freely available, but if used in any publication (web based or print) please use the following acknowledgement or equivalent: <i> Images furnished by the Manhattan Urban Heat Island Project, the NOAA-CREST Institute of the City College of New York with funding by the Consortium for Climate Risk in the Urban Northeast (CCRUN).</i>
+<p>
+<I>Status: Both summers are included, with instrument bias correction and detrending based on an ensemble of NYCmetnet. </i>
+<p>
+These images show the data collected as field agents walked across Manhattan in a series of simultaneous walks between 2 and 3 pm on selected days.  Only the average results of multiple walks are shown, with deviations calculated from the average for each day (daily anomalies) so that multiple days of different conditions can be averaged together.  Details of how the data was processed to arrive at these images is contained in the <a href="dataset_creation.html">dataset creation</a> page.
+<p>
+<strong><A name="anomalymaps">Average Anomalies</A></strong><p>
+These maps show on average (18 days streets, 11 days avenues) how the temperature, dewpoint and relative humidity change from the Manhattan-wide average between 2 and 3 pm on a summer day.  Yellow indicates the average value, with colors ranging from green to blue indicating lower and colors from orange to red/purple indicating higher values.
+<p>
+Note that DewPoint represents the amount of water vapor in the air: the higher the dewpoint the higher the water vapor density.  This makes it a more physical variable than Relative Humidity, which will change with temperature even if the amount of water vapor does not.  RH is included due to its influence on health.
+<p>
+<table>
+<tr>
+<td><img src="images/summersavg_Tdiff_H-AVGsx2.png"><br><center>Temperature</center></td>
+<td><img src="images/summersavg_DPdiff_H-AVGsx2.png"><br><center>DewPoint</center></td>
+<td><img src="images/summersavg_RHdiff_H-AVGsx2.png"><br><center>Relative Humidity</center></td>
+</tr>
+</table>
+<p>
+<strong> Average Standard Deviations from Manhattan Average</strong><p>
+This is the same as the above maps, but using standard deviations instead of values.  For example, a temperature anomaly of 3 degrees may be 2 standard deviations if a standard deviation is 1.5 degrees on that day.  Since the variability of temperature changes from day to day, the number of standard deviations may be a better way to predict local variations.
+<table>
+<tr>
+<td><img src="images/summersavg_Tdev_H-AVGsx2.png"><br><center>Temperature</center></td>
+<td><img src="images/summersavg_DPdev_H-AVGsx2.png"><br><center>DewPoint</center></td>
+<td><img src="images/summersavg_RHdev_H-AVGsx2.png"><br><center>Relative Humidity</center></td>
+</tr>
+</table>
+<p>
+<strong>Statistical Data Quality: Student T-test</strong><p>
+The statistical quality of this data can be assessed by performing a Student T-test between the ensemble of values that go into the average of each geographical point, and an average ensemble of the whole of Manhattan.    the T values shown in the maps below are calculated from the standard deviation of the data from all days at each point as compared to the average standard deviation of the whole data set.
+<table>
+<tr>
+<td><img src="images/summersavg_Tdev_H-Ttestx2.png"><br><center>Temperature</center></td>
+<td><img src="images/summersavg_DPdev_H-Ttestx2.png"><br><center>DewPoint</center></td>
+<td><img src="images/summersavg_RHdev_H-Ttestx2.png"><br><center>Relative Humidity</center></td>
+</tr>
+</table>
+<b><A name="confidence">Statistical Confidence Levels</A></b><br>
+The percent confidence level can be read in the table below, knowing that for the two summers there are 17 days on which these walks are performed.  For example, a color of red means a T value between 0.75 and 1.25.  Our table shows a confidence level of between 77% and 89%.<img src="images/Ttable.png">
+<p>
+<center><strong> Avenue Walks</strong></center>
+<p>
+The data shown below is collected in the same manner as above, except that the walks were along the "North-South" avenue axis of Manhattan rather than "East-West" street axis as above.  Separate routes have different biases due to being largely in full sun, so correction has been done by matching endpoints.  Due to the non-uniformity of relative humidity (it changes both with temperature and water vapor) it is omitted from the endpoint matching.  This procedure also invalidated the T-test procedure, which is omitted as well.  Despite the endpoint correction, relative differences between adjacent points were preserved.  At this point only the deviations are shown, not the differences.
+<p>
+<center><strong> Average Standard Deviations from Manhattan average</strong></center>
+<table>
+<tr>
+<td><img src="images/summersavg_Tdev_Vbalanced-AVGx2.png"><br><center>Temperature</center></td>
+<td><img src="images/summersavg_DPdev_Vbalanced-AVGx2.png"><br><center>DewPoint</center></td>
+</tr>
+</table>
+<p>
+<p>
+See the East-West results above for explanations of these images.
+
+<hr>
+<H2><center>Fixed Instrument Results</center></H2>
+<p>
+These images will show deviations from the fixed instrument average (anomalies) averaged over the 3 month period the instruments were in place: June 20 - Sept 21, 2013.  Due to convective fluctuations the temperature at any given time is taken as the average during an hour surrounding the time given: for example a 3 pm temperature is actually the average temperature from 2:30 to 3:30 pm.
+<p>
+The variability is lower than for the street level campaigns, but for purposes of comparison the scale is kept the same.  The 3 pm column would correspond to the end of the street level walks.
+<table>
+ <th colspan = 4> <h3>Temperature Differences from Average (C)</h3></tr>
+ <tr>
+    <td><img src="images/hoboHr3_avg-Tdev.png"><br><center>03 AM T diff</center></td>
+    <td><img src="images/hoboHr9_avg-Tdev.png"><br><center>09 AM T diff</center></td>
+    <td><img src="images/hoboHr15_avg-Tdev.png"><br><center>03 PM T diff</center></td>
+    <td><img src="images/hoboHr21_avg-Tdev.png"><br><center>09 PM T diff</center></td>
+ </tr>
+ <th colspan = 4> <h3>Dewpoint Differences from Average (C)</H3></tr>
+ <tr>
+    <td><img src="images/hoboHr3_avg-DPdev.png"><br><center>03 AM DP diff</center></td>
+    <td><img src="images/hoboHr9_avg-DPdev.png"><br><center>09 AM DP diff</center></td>
+    <td><img src="images/hoboHr15_avg-DPdev.png"><br><center>03 PM DP diff</center></td>
+    <td><img src="images/hoboHr21_avg-DPdev.png"><br><center>09 PM DP diff</center></td>
+ </tr>
+ <th colspan = 4> <H3>Relative Humidity Differences from Average (%)</H3></tr>
+ <tr>
+    <td><img src="images/hoboHr3_avg-RHdev.png"><br><center>03 AM RH diff</center></td>
+    <td><img src="images/hoboHr9_avg-RHdev.png"><br><center>09 AM RH diff</center></td>
+    <td><img src="images/hoboHr15_avg-RHdev.png"><br><center>03 PM RH diff</center></td>
+    <td><img src="images/hoboHr21_avg-RHdev.png"><br><center>09 PM RH diff</center></td>
+ </tr>
+ </table>
+<hr>
+<H1><center>Surface Characteristics Maps</center></H1>
+<p>
+Building characteristics have been aggregated into a 0.001 degree (~100 m) grid from the New York City (<A href="http://www.nyc.gov/html/dcp/html/bytes/applbyte.shtml#pluto">Map Pluto</a>) dataset.  Vegetation density and albedo are estimated from the LandSat satellite. Elevation comes from the US Geographical Survey, from which water fraction is also derived.  All data sets are put on the same grid.
+<center>
+<table>
+<tr>
+<td><img src="images/Bfrac-HiRes_mapbig.png"><br><center><h3>Building Area Fraction</h3></center></td>
+<td><img src="images/Bheight-HiRes_mapbig.png"><br><center><h3>Average Building Height</h3></center></td>
+</tr>
+<tr>
+<td><img src="images/ndvi-HiRes_mapbig.png"><br><center><h3>Vegetation Index</h3></center></td>
+<td><img src="images/albedo-HiRes_mapbig.png"><br><center><h3>Albedo</h3></center></td>
+</tr>
+<tr>
+<td><img src="images/elevation-HiRes_mapbig.png"><br><center><h3>Elevations</h3></center></td>
+<td><img src="images/water500m-HiRes_mapbig.png"><br><center><h3>Water Influence<h3></center></td>
+</tr>
+</table>
+</center>
+<p>
+The elevation data is on a higher resolution grid with different boundaries. A loose outline is drawn around Manhattan.
+<p>
+The water influence map shows the fraction of water within a 1 km box centered on each point.  This means that <i>in our mathematical model</i> the influence of a water body decreases with distance, going to zero if more than 500 m away.
+<p>
+<table>
+<tr>
+<td><img src="images/NYC-LLadjust_neighborhood-grid.png"><br><center><h2>Composite: NDVI and Buildings</h2></center></td>
+<td>
+In this composite image, blue represents dense, low buildings; purple represents dense, high buildings; yellow a mix of high buildings and vegetation; and blue-green a mix of low buildings and vegetation.  Note that the NBSD only covers manhattan and surrounding parts of each borough.
+</td>
+</tr>
+</table
+<p><p>
+The composite map can best be understood when compared to visible imagery from Google Earth.  The maps below are zoomed into Manhattan. 
+<table>
+<tr>
+<td><img src="images/NYC_LLadjust_neighborhood_zoom.jpg"></td>
+<td><img src="images/manhattan_google_align.jpg"></td>
+</tr>
+</table>
+<p>
+</body>
+</html>

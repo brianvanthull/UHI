@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>Manhattan UHI Data</title>
+<style type="text/css">
+ body {
+        width: 1200px;
+      }
+</style>
+</head>
+<body bgcolor="#bbbbbb">
+<Center> <H1>Manhattan Urban Heat Island Data Sets</H1></center>
+<hr>
+<center><H1> Field Campaign Data </H1></center>
+<p>
+The field campaigns divide into two components: street level walking campaigns during the summers of 2012 and 2013, and mounted instruments during the summer of 2013 with plans to continue after the first set is analyzed.
+<p>
+This data is made freely available, but if used for publication please use the following acknowledgement or equivalent: <i> Data furnished by the Manhattan Urban Heat Island Project, the NOAA-CREST Institute of the City College of New York with funding by the Consortium for Climate Risk in the Urban Northeast (CCRUN).</i> A paper has been submitted for publication, but until published this website should be referenced.
+<p>
+<table>
+<tr>
+<td width="35%">
+  <H2>Walking Field Campaign Averaged Data</H2>
+  <p>
+A sample of this data set is shown by the colored squares in the image to the right.  At each location the deviation of the variable (T,RH,DP) from the Manhattan wide average (this is called the anomaly) is calculated, and the anomalies for all days are averaged together.  In the data set these are referred to as Tdev, RHdev, DPdev.  If the anomalies are recast as the number of standard deviations from the average, the variables are Tsd, RHsd, and DPsd. Surface characteristics are included for each point, including building area fraction and average height in meters. A complete description of how this data set is formed is found in the <A href="dataset_creation.html">Dataset Creation</a> page.  
+<p>
+Note that DewPoint represents the amount of water vapor in the air: the higher the dewpoint the higher the water vapor density.  This makes it a more physical variable than Relative Humidity, which will change with temperature even if the amount of water vapor does not.  RH is included for its influence on health.
+<p>
+<A href="data/summeravgs_Hsurf.txt" target="_blank">Averaged Anomaly Data Street (east-west) walks</a><br>
+<A href="data/TvaluesH.txt">T values for Street walks</A>
+<p>
+The North-South (avenue) walks at this time of day were in full sunlight, so the response is different from the East-West (street) walks in shadow.  Due to radiative bias correction there are currently no T values for this data set
+<p>
+<A href="data/summeravgs_Vbalancesurf.txt" target="_blank">Averaged Anomaly Data North-South walks</a><br>
+<p>
+This data is in text format and can be read by any word processor or imported into analysis software. The use of the T values for assessing statistical data quality with a chart is described <A href="imagepage.html#confidence">here.</A>
+<p>
+<I> Status: Summers of 2012-13 with instrument bias correction applied. Surface data from MODIS, NBSD, USGS added in.  LandSat surface features expected by the beginning of 2014.</I>
+</td>
+<td width="25%">
+   <img src="images/parallel_hobo.png">
+</td>
+<td width="40%">
+  <H2> Mounted Installation Data</H2>
+ <p>
+  Ten Instruments measuring Temperature, Relative Humidity and Illumination were mounted in the locations marked by white octogons on the map.  Dewpoint was calculated from T and RH.  The measurements were taken for 3 months at an interval of 3 minutes.  The instruments were mounted between 3 an 4 meters high on lamp-posts with the approval of the NYC Department of Transportation. The data is in comma separated value (.csv) format which can be easily imported into spreadsheet or read by analysis software. 
+<p>
+The instrument locations are described in the <a href="data/hobo_metadata_summer2013.html" target="_blank">Metadata Page</a>, where MSL refers to the surface level above mean sea level and AGL refers to the height of the instrument shelter above the surface.
+<p>
+<a href="data/hobo-145st_june24-sep21_2013-loc10.csv" target="_blank">145th Street</A><br>
+<a href="data/hobo-120stW_june24-sep21_2013-loc9.csv" target="_blank">120th Street West</A>,<a href="data/hobo-120stE_june24-sep21_2013-loc8.csv" target="_blank">120th Street East</A><br>
+<a href="data/hobo-81stCPW_june24-sep21_2013-loc7.csv" target="_blank">81th Street</A><br>
+<a href="data/hobo-57stW_june24-sep21_2013-loc6.csv" target="_blank">57th Street West</A>,
+<a href="data/hobo-57stE_june24-sep21_2013-loc5.csv" target="_blank">57th Street East</A><br>
+<a href="data/hobo-35st_june24-sep21_2013-loc4.csv" target="_blank">35th Street</A><br>
+<a href="data/hobo-14st_june24-sep21_2013-loc3.csv" target="_blank">14th Street</A><br>
+<a href="data/hobo-princest_june24-sep21_2013-loc2.csv" target="_blank">Prince Street</A><br>
+<a href="data/hobo-readest_june24-sep21_2013-loc1.csv",target="_blank">Reade Street</A>
+<p>
+<p>
+The dataset below is formed of hourly average anomalies of each station from the station average, showing the diurnal cycle.  This is in text format. 
+<p>
+<a href="data/hobohr_diurnal_june24-sep21_2013.txt" target="_blank">Average Diurnal Cycle Data</a>
+<p>
+In addition to raw data and averages, measures of spatial variability between stations and temporal variability at each station has been calculated, and is available in text format. The values represent standard deviations in temperature and dewpoint.
+<p>
+<a href="data/hobo-spatialSD_TDP.txt" target="_blank">Hourly Spatial Variations between Stations</a>
+<p>
+<a href="data/hobo-temporalSD_TDP.txt" target="_blank">Hourly Temporal Variations at each Station</a>
+</td>
+</tr>
+</table>
+<p>
+<hr>
+<center><h1>Surface Characterization Data Sets</h1></center>
+<p>
+Note that the data sets below have been re-formatted from other sources (NBSD, USGS, MODIS etc) and the original sources should be acknowledged in any publication using this data.
+<p>
+Building characteristics have been tabulated by the National Building Statistics Database (<A href="NBSD2_FinalReport.pdf">NBSD</a>) at 250 m resolution.  In the datasets below this has been paired with Normalized Difference Vegetation Index (NDVI) from the Modis satellite, which is also at roughly 250 m resolution.  All data sets have been regridded to a common 0.025 deg x 0.025 deg lat-lon grid.
+<p>
+The data sets are Building area fraction, Average Building Height (m), NDVI (close to 1 is thick vegetation) and albedo.  More detailed information on the preparation of these sets can be found in the <A href="dataset_creation.html">Dataset Creation</A> page.
+<p>
+<center>
+<strong>NBSD Data</strong><br>
+<a href="data/area_nyc250m.txt">Building area fraction</a>, <a href="data/height_nyc250m.txt">Average Building Height</a> <br>
+<strong>MODIS data sets</strong><br>
+ <a href="data/ndvi_nyc250m.txt">Vegetation Index</a>, <a href="data/albedo_nyc250m.txt">Albedo</a> <br>
+<strong>Quarter Degree Grid for above data sets</strong><br>
+<a href="data/lat_nyc250m.txt">Latitude grid</a>, <a href="data/lon_nyc250m.txt">Longitude grid</a><br>
+<strong>Elevation and Water Data</strong><br>
+<a href="data/manhattan_DEM_m.txt">Elevation, Lat, Lon</a>,<a href="data/manhattan_water500m.txt">Water fraction, Lat, Lon</a>
+</center>
+<p>
+A separate grid at 50 m resolution is used for elevation data, converted from the USGS 30 meter grids.  The altitude in meters, latitude and longitude are all available in one file, one variable after the other. A grayscale image of the data is found in the <A href="imagepage.html">image page</A>.  
+<p>
+The influence of water is modeled as the fraction of river/bay water within a 1 km box centered on each point.  River water location is found by finding elevations below 0.2 m.
+<p>
+Landsat Datasets are being created using supervised classification for buildings, vegetation, cropland, wetlands and open water.<br>
+<i>Status: soon available online</i>
+</body>
+</html>
